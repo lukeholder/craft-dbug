@@ -14,23 +14,22 @@ class DbugTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'dbug'  => new \Twig_Filter_Method($this, 'dbug', array('is_safe' => array('html'))),
-            'dbugex'  => new \Twig_Filter_Method($this, 'dbugex', array('is_safe' => array('html')))
+            'dbug'  => new \Twig_Filter_Method($this, 'dbug', array('is_safe' => array('html')))
         );
     }
     public function getFunctions()
     {
         return array(
-            'dbug'  => new \Twig_Function_Method($this, 'dbug', array('is_safe' => array('html'))),
-            'dbugex'  => new \Twig_Function_Method($this, 'dbugex', array('is_safe' => array('html')))
+            'dbug'  => new \Twig_Function_Method($this, 'dbug', array('is_safe' => array('html')))
         );
     }
 
-
     public function dbug($var, $name = "DBUG", $isCollapsed=true, $forceType="")
     {
+
         $main_array = array();
         $html = "";
+
         if (is_null($var)) {
             $main_array["Null"] = Null;
             $html = $this->pretty($main_array,$forceType,$isCollapsed,$name);
