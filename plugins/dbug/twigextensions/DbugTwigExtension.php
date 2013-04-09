@@ -8,7 +8,7 @@ class DebugTwigExtension extends \Twig_Extension
 
     public function getName()
     {
-        return 'debug';
+        return 'dbug';
     }
 
     public function getFilters()

@@ -30,6 +30,6 @@ class DbugPlugin extends BasePlugin
     {
         Craft::import('plugins.dbug.twigextensions.debugTwigExtension');
 
-        return new debugTwigExtension();
+        return new dbugTwigExtension();
     }
 }
