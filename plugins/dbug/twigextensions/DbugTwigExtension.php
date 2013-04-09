@@ -2,7 +2,7 @@
 
 namespace Craft;
 
-class DebugTwigExtension extends \Twig_Extension
+class DbugTwigExtension extends \Twig_Extension
 {
     protected $env;
 
