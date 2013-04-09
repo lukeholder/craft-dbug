@@ -6,7 +6,7 @@ they implement.
 
 ## Installation
 
-1. Upload this directory to `craft/plugins/dbug/` on your server.
+1. Upload the contents of plugins/dbug directory to `craft/plugins/dbug/` on your server.
 2. Enable the plugin under *Craft Admin > Settings > Plugins*
 
 ## Usage
