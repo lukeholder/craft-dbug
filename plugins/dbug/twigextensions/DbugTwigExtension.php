@@ -14,33 +14,35 @@ class DbugTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'dbug'  => new \Twig_Filter_Method($this, 'dbug', array('is_safe' => array('html')))
+            'dbug'  => new \Twig_Filter_Method($this, 'dbug', array('is_safe' => array('html'))),
+            'dbugex'  => new \Twig_Filter_Method($this, 'dbugex', array('is_safe' => array('html')))
         );
     }
     public function getFunctions()
     {
         return array(
-            'dbug'  => new \Twig_Function_Method($this, 'dbug', array('is_safe' => array('html')))
+            'dbug'  => new \Twig_Function_Method($this, 'dbug', array('is_safe' => array('html'))),
+            'dbugex'  => new \Twig_Function_Method($this, 'dbugex', array('is_safe' => array('html')))
         );
     }
 
-    public function dbug($var, $name = "DBUG")
+
+    public function dbug($var, $name = "DBUG", $isCollapsed=true, $forceType="")
     {
         $main_array = array();
-
         $html = "";
         if (is_null($var)) {
             $main_array["Null"] = Null;
-            $html = $this->pretty($main_array,"",true,$name);
+            $html = $this->pretty($main_array,$forceType,$isCollapsed,$name);
         } elseif (is_numeric($var)){
             $main_array["Number"] = $var;
-            $html = $this->pretty($main_array,"",true,$name);
+            $html = $this->pretty($main_array,$forceType,$isCollapsed,$name);
         } elseif (is_string($var)){
             $main_array["String"] = $var;
-            $html = $this->pretty($main_array,"",true,$name);
+            $html = $this->pretty($main_array,$forceType,$isCollapsed,$name);
         } elseif (is_array($var)) {
             $main_array["Data"] = $var;
-            $html = $this->pretty($main_array,"",true,$name);
+            $html = $this->pretty($main_array,$forceType,$isCollapsed,$name);
         } elseif (is_object($var)) {
 
             if (method_exists($var, 'getHelpText')) {
@@ -75,10 +77,10 @@ class DbugTwigExtension extends \Twig_Extension
                 $main_array["Methods"] = $methods;
             }
 
-            $html .= $this->pretty($main_array,"",true,$name);
+            $html .= $this->pretty($main_array,$forceType,$isCollapsed,$name);
 
         }else {
-            $html .= $this->pretty($var,"",true,$name);
+            $html .= $this->pretty($var,$forceType,$isCollapsed,$name);
         }
 
         return $html;
