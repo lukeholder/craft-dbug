@@ -16,19 +16,24 @@ You can use dbug either as a function or filter:
     {{ craft.request | dbug }}
     {{ dbug(craft.request) }}
 
+Click the green boxes to see output
 
 Aha! We can see this variable has some useful methods on it. Let's dig deeper:
 
     {{ craft.request.getSegments | dbug }}
 
-This returns:
-
-    Array: ["blog","2012","11","my-post-title"]
-
 Now we're getting somewhere! No more digging around in the documentation trying to figure out
 what's available to you.
 
 The output is default colapsed as to not mess up your design. Cick the Green boxes to expand.
+
+You can also name your dbug output so its easier to find on the page. Just add a string
+to give your output a name:
+
+{{ craft.request.getSegments | dbug("request segments") }}
+
+The above is useful when the debug data is not clear or you have lots of dbugs on 
+a page.
 
 ## Developers
 
