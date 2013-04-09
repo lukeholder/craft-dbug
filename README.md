@@ -6,7 +6,7 @@ they implement.
 
 ## Installation
 
-1. Upload the contents of plugins/dbug directory to `craft/plugins/dbug/` on your server.
+1. Upload the contents of `plugins/dbug/` directory to `craft/plugins/dbug/` on your server.
 2. Enable the plugin under *Craft Admin > Settings > Plugins*
 
 ## Usage
@@ -16,7 +16,7 @@ You can use dbug either as a function or filter:
     {{ craft.request | dbug }}
     {{ dbug(craft.request) }}
 
-Click the green boxes to see output
+Click the green boxes to see output!
 
 Aha! We can see this variable has some useful methods on it. Let's dig deeper:
 
