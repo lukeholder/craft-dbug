@@ -55,6 +55,6 @@ Under "Help Text"
 Please submit issues and feature requests through the github issues.
 
 
-## Thanks
+## Thanks To
 
 Adrian Macniel
