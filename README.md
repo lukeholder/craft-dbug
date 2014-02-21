@@ -6,6 +6,9 @@ they implement.
 
 ## Installation
 
+GOTO the github releases page to download a release that includes all dependancies.
+If you are a developer you need to use composer to install the dependancies.
+
 1. Upload the contents of `plugins/dbug/` directory to `craft/plugins/dbug/` on your server.
 2. Enable the plugin under *Craft Admin > Settings > Plugins*
 
