@@ -1,4 +1,8 @@
 {
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
     "hash": "44e85e4b94c184ef13a849944604a918",
     "packages": [
         {
@@ -30,9 +34,9 @@
             ],
             "authors": [
                 {
-                    "name": "Sunra",
+                    "name": "sunra",
                     "email": "sunra@yandex.ru",
-                    "homepage": "https://github.com/sunra"
+                    "homepage": "http://github.com/sunra"
                 }
             ],
             "description": "Most beautiful variable dump library for PHP (ColdFusion like style)",
