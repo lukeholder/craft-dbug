@@ -1,4 +1,5 @@
 .DS_Store
 *.log
 *.sqlite3
+*.zip
 vendor

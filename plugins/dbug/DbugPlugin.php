@@ -13,7 +13,7 @@ class DbugPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '1.3';
+        return '2.0';
     }
 
     public function getDeveloper()
@@ -23,10 +23,10 @@ class DbugPlugin extends BasePlugin
 
     public function getDeveloperUrl()
     {
-        return 'http://logicandpixels.com.au';
+        return 'http://holpac.com';
     }
 
-    public function hookAddTwigExtension()
+    public function addTwigExtension()
     {
         Craft::import('plugins.dbug.twigextensions.dbugTwigExtension');
 
