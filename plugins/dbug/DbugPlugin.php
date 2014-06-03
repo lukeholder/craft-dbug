@@ -28,8 +28,8 @@ class DbugPlugin extends BasePlugin
 
     public function addTwigExtension()
     {
-        Craft::import('plugins.dbug.twigextensions.dbugTwigExtension');
+        Craft::import('plugins.dbug.twigextensions.DbugTwigExtension');
 
-        return new dbugTwigExtension();
+        return new DbugTwigExtension();
     }
 }
