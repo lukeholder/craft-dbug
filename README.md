@@ -1,4 +1,5 @@
 # dbug Plugin for Craft CMS
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/lukeholder/craft-dbug?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This plugin adds a helpful `dbug` method to your Craft templates. This will help you
 see in the dark - figure out what kind of variables you are dealing with, and what methods
