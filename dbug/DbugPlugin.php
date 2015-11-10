@@ -18,12 +18,12 @@ class DbugPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '2.1';
+        return '2.5';
     }
 
     public function getSchemaVersion()
     {
-        return '2.1';
+        return '2.5';
     }
 
     public function getDeveloper()
