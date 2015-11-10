@@ -11,9 +11,19 @@ class DbugPlugin extends BasePlugin
         return Craft::t('Dbug');
     }
 
+    public function getDescription()
+    {
+        return TemplateHelper::getRaw("Adds a <strong style='color:red'><code>dbug</code></strong> function to pretty dump variables in twig.");
+    }
+
     public function getVersion()
     {
-        return '2.0';
+        return '2.1';
+    }
+
+    public function getSchemaVersion()
+    {
+        return '2.1';
     }
 
     public function getDeveloper()
@@ -23,13 +33,12 @@ class DbugPlugin extends BasePlugin
 
     public function getDeveloperUrl()
     {
-        return 'http://holpac.com';
+        return 'http://makewithmorph.com';
     }
 
     public function addTwigExtension()
     {
-        Craft::import('plugins.dbug.twigextensions.DbugTwigExtension');
-
+        require_once __DIR__."/extensions/DbugTwigExtension.php";
         return new DbugTwigExtension();
     }
 }
